@@ -16,12 +16,14 @@
 		 
 	<table>
 	 <thead>
+	
            <tr>
-              <th><h3>Category Id</h3></th>
-              <th><h3>Category Name</h3></th>
+              <font face="arial"> <th>Category Id</th>   </font>
+              <th>Category Name</th>
               <th> </th>
               <th> </th>
            </tr>
+        
      </thead>
      <c:forEach var="c" items="${ca}">
         <tr>

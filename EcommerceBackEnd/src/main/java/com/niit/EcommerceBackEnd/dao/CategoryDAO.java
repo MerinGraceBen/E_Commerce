@@ -13,4 +13,5 @@ public interface CategoryDAO
 	void saveCategory(Category c);
 	 public void deleteCategory(int cat_id);
 	    public void updateCategory(Category c);
+		
 }

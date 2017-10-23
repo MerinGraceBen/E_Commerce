@@ -1,4 +1,4 @@
-package com.niit.EcommerceBackEnd.model;
+/*package com.niit.EcommerceBackEnd.model;
 
 import java.io.Serializable;
 import javax.persistence.Column;
@@ -35,7 +35,7 @@ public class Cart implements Serializable
 	 
 
 	 @Column(name = "PRODNAME", nullable = false)
-	String prodname;
+	Product prodname;
 	
 	 @Column(name = "USERNAME", nullable = false)
 	 String username;
@@ -77,8 +77,8 @@ public class Cart implements Serializable
 		return prodname;
 	}
 
-	public void setProdname(String prodname) {
-		this.prodname = prodname;
+	public void setProdname(Product p) {
+		this.prodname = p;
 	}
 			 
 	public int getId()
@@ -90,3 +90,4 @@ public class Cart implements Serializable
 		this.id = id;
 	}
 }
+*/

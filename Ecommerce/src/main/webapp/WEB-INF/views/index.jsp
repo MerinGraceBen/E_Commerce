@@ -4,38 +4,10 @@
 <meta charset="ISO-8859-1">
 <title>HOME</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <link rel="stylesheet" type="text/css" href="project.css">
+  
 </head>
 <body style="background-color: black">
-<nav>
-<div class="navbar  navbar-inverse">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="#">Merii Collections</a>
-    </div>
-    <ul class="nav navbar-nav">
-     
-     
-      <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Category<span class="caret"></span></a>
-        <ul class="dropdown-menu">
-        	 <c:forEach var ="c" items="${cat_id}"> 
-    	    	<option>${c.ctype}</option>
-        	</c:forEach>
-        </ul>
-         <li><a href="#">Today's Offers</a></li>
-         <li><a href="Admin">Admin</a>
-    </ul>
-       <ul class="nav navbar-nav navbar-right">
-       		<li><a href="Cart"><span class="glyphicon glyphicon-shopping-cart"></span>Cart</a></li>
-         <li><a href="SignUp"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-      <li><a href="login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-    </ul>
-  </div>
-  </div>
-</nav>
+<jsp:include page="Header.jsp"></jsp:include>
   <div class="container">
 
   <div id="myCarousel" class="carousel slide "  data-ride="carousel">

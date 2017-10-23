@@ -13,4 +13,5 @@ public interface ProductDao
 	void saveProduct(Product pr);
 	public void deleteProduct(int id);
 	void updateProduct(Product p);
+	List<Product> getprbycatid(int id);
 }

@@ -33,8 +33,12 @@
          </form> 
        </div>
     
+    
+    
+    
+    
  	   <div id="prod" class="tab-pane fade in active">
- 		<form action="saveProduct"  method="post" "multipart/form-data">
+ 		<form action="saveProduct"  method="post" enctype="multipart/form-data">
          <h3>Product</h3>
          <label><b>NAME</b></label>
     	   <input type="text" name="DTYPE" id="name" required></br>
@@ -62,10 +66,15 @@
     		</c:forEach>
     	 </select>
     <br>
+    <input type="file" name="img" >
     <br>
    		 <button type="submit" class="btn btn-default" href="ad">Save</button>
    		</form>
        </div>
+    
+    
+    
+    
     
     
        <div id="sup" class="tab-pane fade in active">
@@ -90,10 +99,7 @@
       	  
   	   </div>
   	   
-  	<!--    
-  	   <form action="saveProduct" method="post" enctype="multipart/form-data">
-   
-    -->
+  
    
      </div>
     </div>

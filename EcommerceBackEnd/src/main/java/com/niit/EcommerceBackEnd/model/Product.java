@@ -39,7 +39,7 @@ public class Product implements Serializable
     private String shortDesc;
    
     @Column(name = "PRICE", nullable = false)
-    private float price;
+    private int price;
     
     @Column(name = "STOCK", nullable = false)
     private int stock;
@@ -52,18 +52,18 @@ public class Product implements Serializable
     @JoinColumn(name="s_id",insertable=true,updatable=true,nullable=false)
     private Supplier supplier;
     
-    @OneToMany(targetEntity=Product.class, mappedBy="cart")
+   /* @OneToMany(targetEntity=Product.class, mappedBy="cart")
 	 private Set<Cart> cart;
 	 
 	 public Set<Cart>getCart()
 	 {
 		 return cart;
-	 }
+	 }*/
 
-	 public void setCart(Set<Cart> cart)
+	/* public void setCart(Set<Cart> cart)
 	 {
 		 this.cart=cart;
-	 }
+	 }*/
     private String image;
     
 	public int getId() {
@@ -98,11 +98,11 @@ public class Product implements Serializable
 		this.shortDesc = shortDesc;
 	}
 
-	public float getPrice() {
+	public int getPrice() {
 		return price;
 	}
 
-	public void setPrice(float price) {
+	public void setPrice(int price) {
 		this.price = price;
 	}
 

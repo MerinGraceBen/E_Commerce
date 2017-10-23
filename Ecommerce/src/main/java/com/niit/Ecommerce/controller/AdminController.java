@@ -14,20 +14,26 @@ import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.niit.EcommerceBackEnd.dao.CategoryDAO;
+import com.niit.EcommerceBackEnd.dao.ProductDao;
 import com.niit.EcommerceBackEnd.dao.SuppilerDAO;
 import com.niit.EcommerceBackEnd.model.Category;
 import com.niit.EcommerceBackEnd.model.Product;
 import com.niit.EcommerceBackEnd.model.Supplier;
 
-public class AdminController {
+public class AdminController
+{
+	@Autowired
+	SuppilerDAO sdao;
+	
+	@Autowired
+	CategoryDAO cdao;
+	
+	@Autowired
+	ProductDao pdao;
 	@RequestMapping(value = "/saveProduct", method = RequestMethod.POST)
 	public ModelAndView saveProduct(HttpServletRequest request,@RequestParam("img") MultipartFile file )
 	{
-		@Autowired
-		SuppilerDAO sdao;
 		
-		@Autowired
-		CategoryDAO cdao;
 
 	ModelAndView mav=new ModelAndView("redirect:/adding");
 	int id=request.getParameter("id");
@@ -57,12 +63,12 @@ public class AdminController {
     
     String filepath = request.getSession().getServletContext().getRealPath("/") + "resources/product/" + file.getOriginalFilename();
 	
-    String filepath ="F:/WorkSpace2/homeDecor/src/main/webapp/resources/images" + file.getOriginalFilename();
+    String filepath1 ="F:/WorkSpace2/Ecommerce/src/main/webapp/Resources/images1" + file.getOriginalFilename();
 	
-	System.out.println(filepath);
+	System.out.println(filepath1);
 	try {
 		byte imagebyte[] = file.getBytes();
-		BufferedOutputStream fos = new BufferedOutputStream(new FileOutputStream(filepath));
+		BufferedOutputStream fos = new BufferedOutputStream(new FileOutputStream(filepath1));
 		fos.write(imagebyte);
 		fos.close();
 		} catch (IOException e) {
@@ -72,7 +78,7 @@ public class AdminController {
 		e.printStackTrace();
 		}
 	System.out.print(product);
-	   productDao.insertProduct(product);
+	   pdao.saveProduct(product);
 	  
 	   return mav;
 	   

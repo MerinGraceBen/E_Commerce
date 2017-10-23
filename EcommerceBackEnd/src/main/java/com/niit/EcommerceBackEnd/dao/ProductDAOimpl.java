@@ -128,4 +128,15 @@ public void updateProduct(Product p)
 		
 	}	
 	
+public List<Product> getprbycatid(int id)
+{
+	Session s=sessionFactory.openSession();
+	Transaction t=s.getTransaction();
+	t.begin();
+	Query q=s.createQuery("from Product where c_id="+id);
+	List<Product> cat=(List<Product>)q.list();
+       t.commit();
+       s.close();
+       return cat;
+}
 }

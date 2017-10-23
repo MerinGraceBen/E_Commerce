@@ -30,7 +30,7 @@
         <tr>
    	       <td class="col-sm-8 col-md-6">
              <div class="media">
-              <a class="thumbnail pull-left" href="#"> <img class="media-object" src="http://icons.iconarchive.com/icons/custom-icon-design/flatastic-2/72/product-icon.png" style="width: 72px; height: 72px;"> </a>
+              <a class="thumbnail pull-left" href="#"> <img class="media-object" src="${pageContext.request.contextPath}/Resources/images1/${p.image}" style="width: 72px; height: 72px;"> </a>
                <div class="media-body">
                 <h4 class="media-heading">  <a href="#">${p.id}</a></h4>
                 <h4 class="media-heading">  <a href="#">${p.dtype}</a></h4>

@@ -13,8 +13,8 @@ import org.springframework.jdbc.datasource.DriverManagerDataSource;
 import org.springframework.orm.hibernate4.HibernateTransactionManager;
 import org.springframework.orm.hibernate4.LocalSessionFactoryBuilder;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
-
-import com.niit.EcommerceBackEnd.model.Cart;
+/*
+import com.niit.EcommerceBackEnd.model.Cart;*/
 import com.niit.EcommerceBackEnd.model.Category;
 import com.niit.EcommerceBackEnd.model.Product;
 import com.niit.EcommerceBackEnd.model.Supplier;
@@ -37,7 +37,7 @@ public class HibernateConfig
         sessionBuilder.addAnnotatedClass(Category.class);
         sessionBuilder.addAnnotatedClass(Product.class);
         sessionBuilder.addAnnotatedClass(Supplier.class);
-        sessionBuilder.addAnnotatedClass(Cart.class);
+       /* sessionBuilder.addAnnotatedClass(Cart.class);*/
         
        
         

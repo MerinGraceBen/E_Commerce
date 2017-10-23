@@ -11,9 +11,8 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body>
-${pro}
-${pro.title}
-	<form action="saveupdateProduct">
+
+	<form action="saveupdateProduct" method="post" enctype="multipart/form-data">
 		<table>
 		
 			<td>Product Id: </td> <td><input type="number" name="id" value="${pro.id}"> </td> </tr>
@@ -22,9 +21,30 @@ ${pro.title}
 			<tr> <td> Product Description:</td> <td> <input type="text" name="SHORT_DESCRIPTION" value="${pro.shortDesc}"></td></tr>
 			<td>Product Price: </td> <td><input type="number" name="PRICE" value="${pro.price}"> </td> </tr>
 			<tr> <td> Product Stock:</td> <td> <input type="text" name="STOCK" value="${pro.stock}"></td></tr>
-			<tr> <td><input type="submit" class="btn btn-success" value="Save"></td></tr>
+			 
+			 
+		 <label><b>Category</b></label>
+         <select name="cat">
+    	    <c:forEach var ="c" items="${cat_id}"> 
+    	    	<option value="${c.id}">${c.ctype}</option>
+        	</c:forEach>
+         </select>
+    <br>
+    
+         <label><b>Supplier</b></label>
+    	 <select name="sup">
+    	 	<c:forEach var ="s" items="${sup_id}"> 
+    			<option value="${s.id}">${s.s_name}</option>
+    		</c:forEach>
+    	 </select>
+    <br>
+    <input type="file" name="img" >
+    <br>
+   		 <button type="submit" class="btn btn-default" href="ad">Update</button>
+   		</form>
+
   		</table>
-	</form>
+
 	 <%@ include file = "Footer.jsp" %> 
 </body>
 </html>

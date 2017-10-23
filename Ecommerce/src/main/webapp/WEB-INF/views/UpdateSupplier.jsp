@@ -11,13 +11,13 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body>
-	<form action="saveupdateSupplier">
+	<form action="saveupdateSupplier" method="post">
 		<table>
 		
 			<td>Supplier Id: </td> <td><input type="number" name="id" value="${sup.id}"> </td> </tr>
 			<tr> <td> Supplier Name:</td> <td> <input type="text" name="Supplier_Name" value="${sup.s_name}"></td></tr>
 			<tr> <td> Supplier Name:</td> <td> <input type="text" name="Supplier_Address" value="${sup.address}"></td></tr>
-			<tr> <td><input type="submit" value="Save"></td></tr>
+			<tr> <td><input type="submit" value="Update"></td></tr>
   		</table>
 	</form>
 	 <%@ include file = "Footer.jsp" %> 

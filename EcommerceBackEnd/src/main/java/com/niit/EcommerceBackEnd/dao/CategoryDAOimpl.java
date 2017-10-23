@@ -39,7 +39,7 @@ public class CategoryDAOimpl implements CategoryDAO
 		Session ssn=sessionFactory.openSession();
 		Transaction t=ssn.getTransaction();
 		t.begin();
-		List<Category> l=(List<Category>) ssn.createCriteria(Category.class).list();
+		List<Category> l=(List<Category>) ssn.createQuery("from Category").list();
 		
 		t.commit();
 		ssn.close();

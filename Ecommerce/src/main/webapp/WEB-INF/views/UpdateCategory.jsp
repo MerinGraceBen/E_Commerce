@@ -16,7 +16,7 @@
 			<tr>
  		    <td>Category Id: </td> <td><input type="number" name="id" value="${cat.id}"> </td> </tr>
  			<tr> <td> Category Name:</td> <td> <input type="text" name="CTYPE" value="${cat.ctype}"></td></tr>
-  			<tr> <td><input type="submit" value="Save"></td></tr>
+  			<tr> <td><input type="submit" value="Update"></td></tr>
  		</table>
 	</form>
  <%@ include file = "Footer.jsp" %> 
